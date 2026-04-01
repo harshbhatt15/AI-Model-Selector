@@ -1,6 +1,6 @@
 def get_model(model_name, X_train, y_train):
 
-    model_name = model_name.strip().lower()  # 🔥 FIX
+    model_name = model_name.strip().lower() 
 
     if model_name == "naive_bayes":
         from sklearn.naive_bayes import GaussianNB
@@ -25,6 +25,15 @@ def get_model(model_name, X_train, y_train):
     elif model_name == "svm":
         from sklearn.svm import SVC
         model = SVC()
+
+    elif model_name == "xgboost":
+        from xgboost import XGBClassifier
+        model = XGBClassifier(
+            n_estimators=100,
+            learning_rate=0.1,
+            max_depth=5
+        )
+
     
     else:
         print("ERROR MODEL NAME:", repr(model_name))  # debug
