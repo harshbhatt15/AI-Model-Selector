@@ -22,18 +22,15 @@ def get_model(model_name, X_train, y_train):
         from sklearn.ensemble import GradientBoostingClassifier
         model = GradientBoostingClassifier()
     
-    elif model_name == "svm":
-        from sklearn.svm import SVC
-        model = SVC()
-
     elif model_name == "xgboost":
         from xgboost import XGBClassifier
         model = XGBClassifier(
-            n_estimators=100,
-            learning_rate=0.1,
-            max_depth=5
-        )
-
+        n_estimators=300,
+        max_depth=6,
+        learning_rate=0.03,
+        subsample=0.8,
+        colsample_bytree=0.8
+    )
     
     else:
         print("ERROR MODEL NAME:", repr(model_name))  # debug
