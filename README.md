@@ -17,3 +17,33 @@ The dataset included is for demonstration purposes, and users can replace it wit
 ---
 
 ## 📂 Project Structure
+AI-Model-Selector/
+│── Classification/ # Classification models and scripts
+│── regression/ # Regression models and scripts
+│── KaggleV2-May-2016.csv # Sample dataset (can be replaced)
+│── .gitignore
+
+
+---
+
+## ⚙️ Features
+
+- 📊 Supports both **Classification and Regression**
+- 🔄 Easy dataset replacement
+- 🤖 Multiple ML models comparison
+- 📈 Performance evaluation (accuracy, metrics, etc.)
+- 🧪 Useful for experimentation and learning
+
+---
+
+## 🧠 How It Works
+
+1. Load dataset (default or custom)
+2. Preprocess the data
+3. Train multiple machine learning models
+4. Evaluate each model using performance metrics
+5. Compare results to identify the best model
+
+---
+## Author
+``Harsh Bhatt``
